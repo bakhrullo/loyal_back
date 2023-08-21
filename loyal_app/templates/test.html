@@ -1,0 +1,12 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools %}
+    <div>
+        <form action="set_null/" method="POST">
+            {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Ballarni 0 qilish</button>
+        </form>
+    </div>
+    <br />
+    {{ block.super }}
+{% endblock %}
