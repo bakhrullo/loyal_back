@@ -65,4 +65,4 @@ class NewsListView(ListAPIView):
 class NewsGetView(RetrieveAPIView):
     lookup_field = 'id'
     serializer_class = NewsSerializer
-    queryset = Product.objects.all()
+    queryset = News.objects.all()

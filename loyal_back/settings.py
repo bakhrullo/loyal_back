@@ -28,11 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config.misc.secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['http://185.65.202.40:4898/']
+CSRF_TRUSTED_ORIGINS = ['https://support.maxone.uz/']
 
 # Application definition
 
@@ -82,23 +82,23 @@ WSGI_APPLICATION = 'loyal_back.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-# DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#          'NAME': config.db.name,
-#          'USER': config.db.user,
-#          'PASSWORD': config.db.password,
-#          'HOST': config.db.host,
-#          'PORT': config.db.port,
-#      }
-#  }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase'
-    }
-}
+      'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+          'NAME': config.db.name,
+          'USER': config.db.user,
+          'PASSWORD': config.db.password,
+          'HOST': config.db.host,
+          'PORT': config.db.port,
+      }
+  }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'mydatabase'
+#    }
+#}
 
 
 
